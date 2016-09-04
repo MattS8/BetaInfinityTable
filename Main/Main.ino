@@ -1,6 +1,17 @@
 // Pulse Width controll of 12 digital outputs for four letters each with an RGB 
 // LED strand Infinity Table
 //
+
+struct Pin 
+{
+  int r;
+  int g;
+  int b;
+};
+typedef struct Pin Pin;
+
+Pin bPins = {2, 3, 4};
+
 int BRed=2;             // 
 int BGreen=3;           // 
 int BBlue=4;            // 
@@ -210,9 +221,10 @@ if (millis() - timeRGB >=(30000 + RtimeRGB))      // 30 seconds into cycle
     DcycleBG=0;                  // Absolute value of sin function
     DcycleBB=1;                  // Absolute value of sin function
   }
- if (millis() - timeRGB >=(40000 + RtimeRGB))    // Time to re-eandomize RtimeRGB
+ if (millis() - timeRGB >=(40000 + RtimeRGB))    // Time to re-randomize RtimeRGB
   {
-    RtimeRGB=random(10000);timeRGB=millis();    // randomize RtimeRGB, Set timeRGB to now
+    RtimeRGB=random(10000);   // randomize RtimeRGB
+    timeRGB=millis();         // Set timeRGB to now
   }
 }
 void loop()
