@@ -1,5 +1,5 @@
 // Pulse Width controll of 12 digital outputs for four letters each with an RGB 
-// LED strand
+// LED strand Infinity Table
 //
 int BRed=2;             // 
 int BGreen=3;           // 
