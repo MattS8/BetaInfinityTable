@@ -33,7 +33,7 @@ int analogPin = A0; // Read voltage from pot to select routine to run
 
 int cycl[12];       // R,G,B for B,E,T,A
 int index = 0;      //
-
+int x = 0;          //
 int y = 0;          //
 int dly = 250;      // Delay variable
 float BRedC;        // Temporary variable
